@@ -64,7 +64,6 @@ section {
     background-color: #232829;
 }
 .main-content {
-
     margin-left: 240px;
     min-height: 200px;
     transition: all 0.25s linear;
@@ -115,13 +114,15 @@ section {
 }
 
 .leftControl {
-    width: 67px;
+    width: 56px;
     height: 56px;
-    padding-top: 7px;
+    padding-top: 14px;
     color: #CFCFCF;
     text-align: center;
     transition: all 0.25s linear;
 }
+
+
 
 .left-side .panel {
     height: 190px;
@@ -133,8 +134,9 @@ section {
 }
 
 .main-content-title {
-    height: 138px;
-    padding: 40px 20px;
+    width: 100%;
+    height: 98px;
+    padding: 20px 20px;
     background-color: #424B4F;
 }
 
@@ -152,7 +154,7 @@ section {
 }
 
 .main-content-body {
-    min-height: 750px;
+   width: 100%;
     padding: 20px 20px 0px 20px;
 }
 .col168 {

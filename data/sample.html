@@ -27,12 +27,12 @@
         <!-- 导航头部 -->
         <div class="navbar-header">
             <!-- 品牌名称或logo -->
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="../index.html">
                 <img src="../image/logo.png" alt="">
             </a>
         </div>
         <div class="leftControl lf">
-           <span class="icon icon-bars icon-3x"></span>
+           <span class="icon icon-yinyang icon-2x"></span>
         </div>
         <!-- 导航项目 -->
             <ul class="nav navbar-nav pull-right navbar-content">
@@ -327,6 +327,13 @@
 
 </script>
 <script>
+    Highcharts.setOptions({
+        chart: {
+
+        },
+        colors: ['#7cb5ec', '#90ed7d', '#f7a35c', '#8085e9',
+            '#f15c80', '#e4d354', '#8085e8', '#8d4653', '#91e8e1']
+    });
     var biao1 = Highcharts.chart("biao1",{
         chart: {
             plotBackgroundColor: null,

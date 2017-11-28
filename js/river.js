@@ -25,11 +25,11 @@ $(".leftControl").on("click",function (e) {
         $(".left-side").removeClass("side-left")
         $(".main-content").removeClass("content-left")
          // $this.parent(".leftControl").css("transform","rotate(0deg)")
-        $(".leftControl").css("transform","rotate(0deg)")
+        $(".leftControl ").css("transform","rotate(0deg)")
     }else {
         $(".left-side").addClass("side-left")
         $(".main-content").addClass("content-left")
-        $(".leftControl").css("transform","rotate(90deg)")
+        $(".leftControl ").css("transform","rotate(180deg)")
          // $this.parent(".leftControl").css("transform","rotate(90deg)")
     }
 
