@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+body {
+    background-color: #3A4144;    
+}
+
+.side-left {
+    margin-left: -240px!important;
+}
+.content-left {
+    margin-left: 0!important;
+}
+.header-nav {
+    background-color: #2F3638;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    width: 240px;
+    height: 56px;
+    padding: 3px 15px 0;
+    background-color: #282D2F;
+}
+
+.navbar-content {
+    height: 56px;
+    padding-top: 10px;
+}
+
+.navbar-content li {
+    position: relative;
+}
+
+.navbar-content a{
+    color: #CFCFCF;
+}
+
+.mylabel {
+    position: absolute;
+    right: 2px;
+    top: 0px;
+}
+
+.left-side {
+    width: 240px;
+    background-color: #282D2F;
+    min-height: 100px;
+    transition: all 0.25s linear;
+}
+
+.left-side .active {
+    color: #fff;
+    background-color: #232829;
+}
+.main-content {
+
+    margin-left: 240px;
+    min-height: 200px;
+    transition: all 0.25s linear;
+}
+
+.left-menu {
+    min-height: 1118px;
+    background-color: #282D2F;
+    color: #868E8E;
+}
+
+.left-menu>li {
+    position: relative;
+}
+
+.left-menu>li a {
+    display: block;
+    padding: 10px 17px;
+    color: #868E8E;
+    position: relative;
+}
+
+.left-menu li a:hover {
+    color: #fff;
+    background-color: #232829;
+}
+
+.left-menu>li>ul {
+
+}
+.left-menu li i {
+    margin-right: 8px;
+}
+
+.submenu {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.25s linear;
+}
+
+.submenu li a {
+    display: block;
+    padding-left: 30px;
+}
+
+.submenu li a i {
+    margin-right: 8px;
+}
+
+.leftControl {
+    width: 67px;
+    height: 56px;
+    padding-top: 7px;
+    color: #CFCFCF;
+    text-align: center;
+    transition: all 0.25s linear;
+}
+
+.left-side .panel {
+    height: 190px;
+    line-height: 190px;
+    text-align: center;
+    color: #CFCFCF;
+    background-color: #1F2224;
+    border: none;
+}
+
+.main-content-title {
+    height: 138px;
+    padding: 40px 20px;
+    background-color: #424B4F;
+}
+
+.main-content-title h3 {
+    margin-top: 10px;
+    color: #fff;
+}
+
+.main-content-title h3 i {
+    margin-right: 8px;
+}
+
+.main-content-title  p {
+    color: #E6E6E6;
+}
+
+.main-content-body {
+    padding: 20px 20px 0px 20px;
+}
+.col168 {
+    height: 268px;
+    margin-bottom: 20px;
+}
+
+.col279 {
+    height: 279px;
+    margin-bottom: 20px;
+}
+
+.col168 , .col279 {
+
+}
+.col330 {
+    height: 330px;
+}
