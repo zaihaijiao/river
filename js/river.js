@@ -2,11 +2,6 @@ $(".left-menu").on("click",">li>a",function (e) {
     e.preventDefault()
     var LIHEIGHT = 40;
     var $this = $(e.target)
-    if($this.attr("id")=="question"){
-        location.href = "diagnosis.html"
-    }else if ($this.attr("id") == "yingji"){
-        location.href = "contingency.html"
-    }
     var id = $this.attr("id")
     localStorage.setItem("activeId",id)
     console.log(id)
@@ -48,13 +43,11 @@ window.onload = function(){
         $("#"+id).addClass("active")
         var num = $("#"+id).siblings("ul").children().length;
         $("#"+id).siblings("ul").css("height",num*LIHEIGHT)
-        console.log(2)
+        $("#"+id).children("span").removeClass("icon-chevron-down icon-chevron-up").addClass("icon-chevron-up")
     }
-    console.log(1)
 }
 
 $(".main-content").resize(function () {
-    console.log(1)
     biao.reflow()
     biao1.reflow()
     biao2.reflow()

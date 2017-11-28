@@ -1,7 +1,12 @@
 @charset "utf-8";
 
 body {
+    padding-top: 56px;
     background-color: #3A4144;    
+}
+
+section {
+    position: relative;
 }
 
 .side-left {
@@ -49,6 +54,9 @@ body {
     background-color: #282D2F;
     min-height: 100px;
     transition: all 0.25s linear;
+    position: fixed;
+    left: 0;
+    top: 56px;
 }
 
 .left-side .active {
@@ -63,7 +71,7 @@ body {
 }
 
 .left-menu {
-    min-height: 1118px;
+    min-height: 1500px;
     background-color: #282D2F;
     color: #868E8E;
 }
@@ -144,6 +152,7 @@ body {
 }
 
 .main-content-body {
+    min-height: 1000px;
     padding: 20px 20px 0px 20px;
 }
 .col168 {
