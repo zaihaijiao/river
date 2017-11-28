@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/zui.css">
+    <link rel="stylesheet" href="../css/zui-theme-dark.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <style>
+        #mainShow {
+            background-color: #3A4144;
+        }
+        #mainShow div {
+
+        }
+    </style>
+    <title>山东章卫新河</title>
+</head>
+<body>
+<!--导航-->
+<nav class="navbar header-navbar header-nav navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- 导航头部 -->
+        <div class="navbar-header">
+            <!-- 品牌名称或logo -->
+            <a class="navbar-brand" href="#">
+                <img src="../image/logo.png" alt="">
+            </a>
+        </div>
+        <div class="leftControl lf">
+           <span class="icon icon-bars icon-3x"></span>
+        </div>
+        <!-- 导航项目 -->
+            <ul class="nav navbar-nav pull-right navbar-content">
+                <li class=""><a href="#">欢迎您,XXX</a></li>
+                <li>
+                    <a href="">
+                        <i class="icon icon-envelope-alt">
+                            <span class="mylabel label label-badge label-success">6</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon icon-bell-alt">
+                            <span class="mylabel label label-badge label-warning">4</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon icon-signout"></i> 退出
+                    </a>
+                </li>
+            </ul>
+
+    </div>
+</nav>
+<!--主体部分-->
+<section>
+        <div class="left-side lf ">
+
+           <ul class="left-menu">
+               <li>
+                   <a id="data" href="../index.html" class=""><i class="icon icon-server"></i>数据管理
+                    <span class="icon icon-chevron-down rt"></span>
+                   </a>
+                   <ul class="submenu">
+                       <li><a href="../data/remote-sising.html"><i class="icon icon-angle-right"></i>遥感信息</a></li>
+                       <li><a href="../data/nature.html"><i class="icon icon-angle-right"></i>自然环境</a></li>
+                       <li><a href="../data/sample.html"><i class="icon icon-angle-right"></i>采样数据</a></li>
+                   </ul>
+               </li>
+               <li><a id="module" href=""><i class="icon icon-cube"></i>模拟评估
+                   <span class="icon icon-chevron-down rt"></span>
+               </a>
+                   <ul class="submenu">
+                       <li><a href=""><i class="icon icon-angle-right"></i>模型库</a></li>
+                       <li><a href=""><i class="icon icon-angle-right"></i>数字模拟</a></li>
+                   </ul>
+               </li>
+               <li ><a id="warn" href=""><i class="icon icon-warning-sign"></i>预警系统
+                   <span class="icon icon-chevron-down rt"></span>
+               </a>
+                   <ul class="submenu">
+                       <li><a href=""><i class="icon icon-angle-right"></i>监测预警<span class="label label-badge label-danger rt">4</span></a></li>
+                       <li><a href=""><i class="icon icon-angle-right"></i>预测预警<span class="label label-badge label-warning rt">2</span></a></li>
+                   </ul>
+               </li>
+               <li><a id="question" href=""><i class="icon icon-cloud"></i>智慧决策
+
+               </a></li>
+               <li><a id="yingji" href=""><i class="icon icon-umbrella"></i>应急预案
+
+               </a></li>
+           </ul>
+        </div>
+        <div class="main-content">
+            <div class="main-content-title">
+                <h3><i class="icon icon-1x icon-server"></i>采样数据</h3>
+                <p>断面，位置管理，水质等级
+                    周围气候、自然地理、地形、降水、蒸发、农业面源、工业电源
+                    土地利用，农田，村庄，公园，工业
+                    历史天气</p>
+            </div>
+            <div class="main-content-body">
+                <div class="container-fluid">
+                    <div id="mainShow" class="row">
+                        <div class="col-md-4">
+                           <div class="panel panel-primary">
+                               <div class="panel-heading">
+                                   <h4>监测点1#</h4>
+                               </div>
+                               <div class="panel-body">
+                                   <div id="biao1"></div>
+                               </div>
+                           </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4>监测点2#</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="biao2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="col-md-4">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h4>监测点3#</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div id="biao3"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="col-md-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4>监测点6#</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="biao6"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4>监测点4#</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table  ">
+                                        <thead>
+                                        <tr>
+                                            <td>水质</td>
+                                            <td>氨氮</td>
+                                            <td>流速</td>
+                                            <td>温度</td>
+                                            <td>日期</td>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>优良</td>
+                                            <td>50mg/m³</td>
+                                            <td>20m/s</td>
+                                            <td>-10℃</td>
+                                            <td>2017/11/28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>优良</td>
+                                            <td>50mg/m³</td>
+                                            <td>20m/s</td>
+                                            <td>-10℃</td>
+                                            <td>2017/11/28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>优良</td>
+                                            <td>50mg/m³</td>
+                                            <td>20m/s</td>
+                                            <td>-10℃</td>
+                                            <td>2017/11/28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>优良</td>
+                                            <td>50mg/m³</td>
+                                            <td>20m/s</td>
+                                            <td>-10℃</td>
+                                            <td>2017/11/28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>优良</td>
+                                            <td>50mg/m³</td>
+                                            <td>20m/s</td>
+                                            <td>-10℃</td>
+                                            <td>2017/11/28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>优良</td>
+                                            <td>50mg/m³</td>
+                                            <td>20m/s</td>
+                                            <td>-10℃</td>
+                                            <td>2017/11/28</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4>监测点5#</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table  ">
+                                        <thead>
+                                        <tr>
+                                            <td>水质</td>
+                                            <td>氨氮</td>
+                                            <td>流速</td>
+                                            <td>温度</td>
+                                            <td>日期</td>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>优良</td>
+                                            <td>50mg/m³</td>
+                                            <td>20m/s</td>
+                                            <td>-10℃</td>
+                                            <td>2017/11/28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>优良</td>
+                                            <td>50mg/m³</td>
+                                            <td>20m/s</td>
+                                            <td>-10℃</td>
+                                            <td>2017/11/28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>优良</td>
+                                            <td>50mg/m³</td>
+                                            <td>20m/s</td>
+                                            <td>-10℃</td>
+                                            <td>2017/11/28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>优良</td>
+                                            <td>50mg/m³</td>
+                                            <td>20m/s</td>
+                                            <td>-10℃</td>
+                                            <td>2017/11/28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>优良</td>
+                                            <td>50mg/m³</td>
+                                            <td>20m/s</td>
+                                            <td>-10℃</td>
+                                            <td>2017/11/28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>优良</td>
+                                            <td>50mg/m³</td>
+                                            <td>20m/s</td>
+                                            <td>-10℃</td>
+                                            <td>2017/11/28</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</section>
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/highcharts/highcharts.js"></script>
+<script src="../js/dark-unica.js"></script>
+<script src="../js/zui.js"></script>
+<script src="../js/screenfull.js"></script>
+<script src="../js/river.js"></script>
+<script>
+    $(document).on("keyup",function (e) {
+        var show = document.getElementById("mainShow");
+        var oldWidth = $()
+        var width = window.screen.width;
+        var height = window.screen.height;
+        console.log(width,height)
+        if(e.keyCode == 122){
+            if(screenfull.enabled){
+                screenfull.request(show)
+            }
+        }
+        if (screenfull.enabled) {
+            screenfull.on('change', () => {
+                console.log('Am I fullscreen?', screenfull.isFullscreen ? 'Yes' : 'No');
+                if(screenfull.isFullscreen){
+                   $("#mainShow").css({
+                       width: width,
+                       height: height
+                   })
+                    console.log("yes")
+                }else {
+                    console.log("no")
+                    $("#mainShow").removeAttr("style")
+                }
+        });
+        }
+    })
+    $("table tr:nth-child(even)").css("backgroundColor","#4B5357")
+    $("table tr:nth-child(odd)").css("backgroundColor","#5D6468")
+    $("thead tr").css("backgroundColor","$4b5357")
+
+
+</script>
+<script>
+    var biao1 = Highcharts.chart("biao1",{
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: '2017 水质'
+        },
+        tooltip: {
+            headerFormat: '{series.name}<br>',
+            pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: '水质',
+            data: [
+                ['极优',   45.0],
+                ['优',       26.8],
+                {
+                    name: '良',
+                    y: 12.8,
+                    sliced: true,
+                    selected: true
+                },
+                ['差',    8.5],
+                ['很差',     6.2],
+                ['非常差',   0.7]
+            ]
+        }]
+    })
+    var biao2 = Highcharts.chart("biao2",{
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '水质'
+        },
+        xAxis: {
+            categories: ['COD', '可溶物', '硝氮', '氰化物', '微生物']
+        },
+        yAxis: {
+            allowDecimals: false,
+            min: 0,
+            title: {
+                text: '水质'
+            }
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/>' +
+                    '总量: ' + this.point.stackTotal;
+            }
+        },
+        plotOptions: {
+            column: {
+                stacking: 'normal'
+            }
+        },
+        series: [{
+            name: '2017-01-05',
+            data: [5, 3, 4, 7, 2],
+            stack: 'male'
+        }, {
+            name: '2017-03-15',
+            data: [3, 4, 4, 2, 5],
+            stack: 'male'
+        }, {
+            name: '2017-06-15',
+            data: [2, 5, 6, 2, 1],
+            stack: 'female'
+        }, {
+            name: '2017-08-19',
+            data: [3, 0, 4, 4, 3],
+            stack: 'female'
+        }]
+    })
+
+    var biao3 = Highcharts.chart('biao3', {
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: '水质变化趋势'
+        },
+        subtitle: {
+            text: '2017年10月11月水质情况'
+        },
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            min: 0,
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null,
+            plotBands: [{ // Light air
+                from: 0.3,
+                to: 1.5,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: '优',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Light breeze
+                from: 1.5,
+                to: 3.3,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: '良',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Gentle breeze
+                from: 3.3,
+                to: 5.5,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: '优',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Moderate breeze
+                from: 5.5,
+                to: 8,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: '优',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Fresh breeze
+                from: 8,
+                to: 11,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: '优良',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // Strong breeze
+                from: 11,
+                to: 14,
+                color: 'rgba(0, 0, 0, 0)',
+                label: {
+                    text: '差',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }, { // High wind
+                from: 14,
+                to: 15,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                    text: '良',
+                    style: {
+                        color: '#606060'
+                    }
+                }
+            }]
+        },
+        tooltip: {
+            valueSuffix: ' m/s'
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 3600000, // one hour
+                pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+            }
+        },
+        series: [{
+            name: '2017年10月',
+            data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
+                7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
+                8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
+                7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
+                3.0, 3.0]
+        }, {
+            name: '2016年10月',
+            data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.3, 0.0,
+                0.0, 0.4, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                0.0, 0.6, 1.2, 1.7, 0.7, 2.9, 4.1, 2.6, 3.7, 3.9, 1.7, 2.3,
+                3.0, 3.3, 4.8, 5.0, 4.8, 5.0, 3.2, 2.0, 0.9, 0.4, 0.3, 0.5, 0.4]
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+    var biao6 = Highcharts.chart("biao6",{
+        chart: {
+            type: 'area'
+        },
+        title: {
+            text: '2018年水质变化预测'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            type: 'datetime',
+            categories: ['1750', '1800', '1850', '1900', '1950', '1999', '2050'],
+            tickmarkPlacement: 'on',
+            title: {
+                enabled: false
+            }
+        },
+        yAxis: {
+            title: {
+                text: '十亿'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value / 1000;
+                }
+            }
+        },
+        tooltip: {
+            split: true,
+            valueSuffix: ' 百万'
+        },
+        plotOptions: {
+            area: {
+                stacking: 'normal',
+                lineColor: '#666666',
+                lineWidth: 1,
+                marker: {
+                    lineWidth: 1,
+                    lineColor: '#666666'
+                }
+            }
+        },
+        series: [{
+            name: '优',
+            data: [502, 635, 809, 947, 1402, 3634, 5268]
+        }, {
+            name: '良',
+            data: [106, 107, 111, 133, 221, 767, 1766]
+        }, {
+            name: '优',
+            data: [163, 203, 276, 408, 547, 729, 628]
+        }, {
+            name: '优',
+            data: [18, 31, 54, 156, 339, 818, 1201]
+        }, {
+            name: '良',
+            data: [2, 2, 2, 6, 13, 30, 46]
+        }]
+    })
+
+    $("#mainShow").resize(function () {
+        biao1.reflow();
+        biao2.reflow();
+        biao3.reflow();
+        biao6.reflow();
+    })
+</script>
+</body>
+</html>

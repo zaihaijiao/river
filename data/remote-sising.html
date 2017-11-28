@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="css/zui.css">
-    <link rel="stylesheet" href="css/zui-theme-dark.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="../css/zui.css">
+    <link rel="stylesheet" href="../css/zui-theme-dark.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/remote.css">
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=v=2.0&ak=akI4wAf7CooAowa2NqMBeREwvbUmYT1L"></script>
     <style>
         #mainShow {
             background-color: #3A4144;
@@ -21,13 +23,13 @@
 </head>
 <body>
 <!--导航-->
-<nav class="navbar header-navbar header-nav" role="navigation">
+<nav class="navbar header-navbar header-nav navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <!-- 导航头部 -->
         <div class="navbar-header">
             <!-- 品牌名称或logo -->
             <a class="navbar-brand" href="#">
-                <img src="image/logo.png" alt="">
+                <img src="../image/logo.png" alt="">
             </a>
         </div>
         <div class="leftControl lf">
@@ -61,17 +63,17 @@
 </nav>
 <!--主体部分-->
 <section>
-        <div class="left-side lf">
+        <div class="left-side lf ">
 
            <ul class="left-menu">
                <li>
-                   <a id="data" href="" class=""><i class="icon icon-server"></i>数据管理
+                   <a id="data" href="../index.html" class=""><i class="icon icon-server"></i>数据管理
                     <span class="icon icon-chevron-down rt"></span>
                    </a>
                    <ul class="submenu">
-                       <li><a href=""><i class="icon icon-angle-right"></i>遥感信息</a></li>
-                       <li><a href=""><i class="icon icon-angle-right"></i>自然环境</a></li>
-                       <li><a href=""><i class="icon icon-angle-right"></i>采样数据</a></li>
+                       <li><a href="../data/remote-sising.html"><i class="icon icon-angle-right"></i>遥感信息</a></li>
+                       <li><a href="../data/nature.html"><i class="icon icon-angle-right"></i>自然环境</a></li>
+                       <li><a href="../data/sample.html"><i class="icon icon-angle-right"></i>采样数据</a></li>
                    </ul>
                </li>
                <li><a id="module" href=""><i class="icon icon-cube"></i>模拟评估
@@ -100,59 +102,69 @@
         </div>
         <div class="main-content">
             <div class="main-content-title">
-                <h3><i class="icon icon-1x icon-server"></i>数据模型</h3>
+                <h3><i class="icon icon-1x icon-server"></i>遥感信息</h3>
                 <p>断面，位置管理，水质等级
                     周围气候、自然地理、地形、降水、蒸发、农业面源、工业电源
                     土地利用，农田，村庄，公园，工业
                     历史天气</p>
             </div>
             <div class="main-content-body">
-                <div class="container-fluid">
+                <div class="container-fluid mapcontainer">
                     <div id="mainShow" class="row">
-                        <div id="biao1"  class="col-md-4 col168"></div>
-                        <div id="biao2"  class="col-md-4 col168"></div>
-                        <div id="biao3"  class="col-md-4 col168"></div>
-                        <div id="biao" class="col-md-8 col279"></div>
-                        <div id="biao4" class="col-md-4 col279"></div>
-                        <div id="biao6" class="col-md-4 col330"></div>
-                        <div id="biao5"  class="col-md-8 col330"></div>
+                        <!--<img src="../image/map.jpg" alt="" class="img-responsive">-->
                     </div>
                 </div>
             </div>
         </div>
 </section>
-<script src="lib/jquery/jquery.js"></script>
-<script src="lib/highcharts/highcharts.js"></script>
-<script src="js/dark-unica.js"></script>
-<script src="js/zui.js"></script>
-<script src="js/screenfull.js"></script>
-<script src="js/river.js"></script>
+<script src="../lib/jquery/jquery.js"></script>
+<script>
+
+            var map = new BMap.Map("mainShow");            // 创建Map实例
+            var point = new BMap.Point(116.240001,37.366658); // 创建点坐标
+            map.centerAndZoom(point,16);
+            map.enableScrollWheelZoom();                 //启用滚轮放大缩小
+
+            var marker = new BMap.Marker(new BMap.Point(116.240001,37.366658));
+            map.addOverlay(marker)
+
+
+
+
+</script>
+<!--<script src="../js/dark-unica.js"></script>-->
+<script src="../js/zui.js"></script>
+<!--<script src="../lib/highcharts/highcharts.js"></script>-->
+<script src="../js/screenfull.js"></script>
+<script src="../js/river.js"></script>
 <script>
     $(document).on("keyup",function (e) {
-        var show = document.getElementById("mainShow");
-        var oldWidth = $()
+        //var show = document.getElementById("mainShow");
+        var show = $(".mapcontainer")[0];
         var width = window.screen.width;
         var height = window.screen.height;
-        console.log(width,height)
         if(e.keyCode == 122){
             if(screenfull.enabled){
-                screenfull.request(show)
+                if (screenfull.enabled) {
+                    screenfull.toggle(show);
+                }
             }
         }
         if (screenfull.enabled) {
             screenfull.on('change', () => {
                 console.log('Am I fullscreen?', screenfull.isFullscreen ? 'Yes' : 'No');
                 if(screenfull.isFullscreen){
-                   $("#mainShow").css({
+                   $(".mapcontainer").css({
                        width: width,
                        height: height
                    })
                     console.log("yes")
                 }else {
                     console.log("no")
-                    $("#mainShow").removeAttr("style")
+                    $(".mapcontainer").removeAttr("style")
                 }
         });
+
         }
     })
 </script>

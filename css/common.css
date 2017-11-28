@@ -71,7 +71,7 @@ section {
 }
 
 .left-menu {
-    min-height: 1500px;
+    min-height: 1000px;
     background-color: #282D2F;
     color: #868E8E;
 }
@@ -152,7 +152,7 @@ section {
 }
 
 .main-content-body {
-    min-height: 1000px;
+    min-height: 750px;
     padding: 20px 20px 0px 20px;
 }
 .col168 {
@@ -170,4 +170,8 @@ section {
 }
 .col330 {
     height: 330px;
+}
+
+.main-content-title h3+p {
+    padding-left: 22px;
 }
