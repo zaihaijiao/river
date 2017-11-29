@@ -1,0 +1,23 @@
+#mainShow {
+  background-color: #3A4144;
+}
+#mainShow .panel-heading {
+  background-color: #4B5357;
+}
+#mainShow table {
+  width: 100%!important;
+  text-align: center;
+  color: #fff;
+}
+#mainShow table tr {
+  border-bottom: 1px solid #666D70;
+}
+#mainShow table td {
+  border-bottom: none;
+}
+#mainShow table tr:last-child {
+  border-bottom: none;
+}
+#mainShow .panel {
+  background-color: #4B5357;
+}

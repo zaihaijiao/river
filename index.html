@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!--<link rel="stylesheet" href="css/zui.css">-->
-    <!--<link rel="stylesheet" href="css/zui-theme-dark.css">-->
-    <!--<link rel="stylesheet" href="css/style.css">-->
-    <!--<link rel="stylesheet" href="css/common.css">-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/zui.css">
+    <link rel="stylesheet" href="css/zui-theme-dark.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/common.css">
     <script src="http://api.map.baidu.com/api?v=2.0&ak=v=2.0&ak=akI4wAf7CooAowa2NqMBeREwvbUmYT1L"></script>
     <style>
         #mainShow {
             background-color: #3A4144;
         }
+
         .mapcontainer {
             height: 770px;
         }
-        #mainShow div {
 
+        #map {
+            width: 100%;
+            height: 100%;
         }
+
+        #mainShow div {}
     </style>
     <title>山东章卫新河</title>
 </head>
+
 <body>
-<!--导航-->
-<nav class="navbar header-navbar header-nav navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <!-- 导航头部 -->
-        <div class="navbar-header">
-            <!-- 品牌名称或logo -->
-            <a class="navbar-brand" href="#">
-                <img src="image/logo.png" alt="">
-            </a>
-        </div>
-        <div class="leftControl lf">
-           <span class="icon icon-yinyang icon-2x"></span>
-        </div>
-        <!-- 导航项目 -->
+    <!--导航-->
+    <nav class="navbar header-navbar header-nav navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- 导航头部 -->
+            <div class="navbar-header">
+                <!-- 品牌名称或logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="image/logo.png" alt="">
+                </a>
+            </div>
+            <div class="leftControl lf">
+                <span class="icon icon-th icon-2x"></span>
+            </div>
+            <!-- 导航项目 -->
             <ul class="nav navbar-nav pull-right navbar-content">
-                <li class=""><a href="#">欢迎您,XXX</a></li>
+                <li class="">
+                    <a href="#">欢迎您,XXX</a>
+                </li>
                 <li>
                     <a href="">
                         <i class="icon icon-envelope-alt">
@@ -61,108 +69,154 @@
                 </li>
             </ul>
 
-    </div>
-</nav>
-<!--主体部分-->
-<section>
+        </div>
+    </nav>
+    <!--主体部分-->
+    <section>
         <div class="left-side lf ">
+            <ul class="left-menu">
+                <li>
+                    <a id="data" href="javascript:;" class="">
+                        <i class="icon icon-server"></i>数据管理
+                        <span class="icon icon-chevron-down rt"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="data/remote-sising.html">
+                                <i class="icon icon-angle-right "></i>遥感信息</a>
+                        </li>
+                        <li>
+                            <a href="data/nature.html">
+                                <i class="icon icon-angle-right"></i>自然环境</a>
+                        </li>
+                        <li>
+                            <a href="data/sample.html">
+                                <i class="icon icon-angle-right"></i>采样数据</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="module" href="javascript:;">
+                        <i class="icon icon-cube"></i>模拟评估
+                        <span class="icon icon-chevron-down rt"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="">
+                                <i class="icon icon-angle-right"></i>模型库</a>
+                        </li>
 
-           <ul class="left-menu">
-               <li>
-                   <a id="data" href="index.html" class=""><i class="icon icon-server"></i>数据管理
-                    <span class="icon icon-chevron-down rt"></span>
-                   </a>
-                   <ul class="submenu">
-                       <li><a href="data/remote-sising.html"><i class="icon icon-angle-right"></i>遥感信息</a></li>
-                       <li><a href="data/nature.html"><i class="icon icon-angle-right"></i>自然环境</a></li>
-                       <li><a href="data/sample.html"><i class="icon icon-angle-right"></i>采样数据</a></li>
-                   </ul>
-               </li>
-               <li><a id="module" href=""><i class="icon icon-cube"></i>模拟评估
-                   <span class="icon icon-chevron-down rt"></span>
-               </a>
-                   <ul class="submenu">
-                       <li><a href=""><i class="icon icon-angle-right"></i>模型库</a></li>
-                       <li><a href=""><i class="icon icon-angle-right"></i>数字模拟</a></li>
-                   </ul>
-               </li>
-               <li ><a id="warn" href=""><i class="icon icon-warning-sign"></i>预警系统
-                   <span class="icon icon-chevron-down rt"></span>
-               </a>
-                   <ul class="submenu">
-                       <li><a href=""><i class="icon icon-angle-right"></i>监测预警<span class="label label-badge label-danger rt">4</span></a></li>
-                       <li><a href=""><i class="icon icon-angle-right"></i>预测预警<span class="label label-badge label-warning rt">2</span></a></li>
-                   </ul>
-               </li>
-               <li><a id="question" href=""><i class="icon icon-cloud"></i>智慧决策
+                        <!--<li><a href=""><i class="icon icon-angle-right"></i>数字模拟</a></li>-->
+                    </ul>
+                </li>
+                <li>
+                    <a id="warn" href="javascript:;">
+                        <i class="icon icon-warning-sign"></i>预警系统
+                        <span class="icon icon-chevron-down rt"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="">
+                                <i class="icon icon-angle-right"></i>监测预警
+                                <span class="label label-badge label-danger rt">4</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon icon-angle-right"></i>预测预警
+                                <span class="label label-badge label-info rt">2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="question" href="desion/decision.html">
+                        <i class="icon icon-cloud"></i>智慧决策
 
-               </a></li>
-               <li><a id="yingji" href=""><i class="icon icon-umbrella"></i>应急预案
+                    </a>
+                </li>
+                <li>
+                    <a id="yingji" href="plane/plan.html">
+                        <i class="icon icon-umbrella"></i>应急预案
 
-               </a></li>
-           </ul>
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="main-content">
             <div class="main-content-title">
-                <h3><i class="icon icon-1x icon-server"></i>数据模型</h3>
-                <p>断面，位置管理，水质等级
-                    周围气候、自然地理、地形、降水、蒸发、农业面源、工业电源
-                    土地利用，农田，村庄，公园，工业
-                    历史天气</p>
+                <h3>
+                    <i class="icon icon-1x icon-server"></i>数据管理</h3>
+                <p>断面，位置管理，水质等级 周围气候、自然地理、地形、降水、蒸发、农业面源、工业电源 土地利用，农田，村庄，公园，工业 历史天气
+                </p>
             </div>
             <div class="main-content-body">
                 <div class="container-fluid">
                     <div id="mainShow" class="mapcontainer row">
-
+                        <div id="map"> </div>
                     </div>
                 </div>
             </div>
         </div>
-</section>
-<script src="lib/jquery/jquery.js"></script>
-<script src="lib/highcharts/highcharts.js"></script>
-<!--<script src="js/dark-unica.js"></script>-->
-<script src="js/zui.js"></script>
-<script src="js/screenfull.js"></script>
-<script src="js/river.js"></script>
-<script>
-    $(document).on("keyup",function (e) {
-        var show = document.getElementById("mainShow");
-        var oldWidth = $()
-        var width = window.screen.width;
-        var height = window.screen.height;
-        console.log(width,height)
-        if(e.keyCode == 122){
-            if(screenfull.enabled){
-                screenfull.request(show)
-            }
-        }
-        if (screenfull.enabled) {
-            screenfull.on('change', () => {
-                console.log('Am I fullscreen?', screenfull.isFullscreen ? 'Yes' : 'No');
-                if(screenfull.isFullscreen){
-                   $("#mainShow").css({
-                       width: width,
-                       height: height
-                   })
-                    console.log("yes")
-                }else {
-                    console.log("no")
-                    $("#mainShow").removeAttr("style")
+    </section>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/highcharts/highcharts.js"></script>
+    <!--<script src="js/dark-unica.js"></script>-->
+    <script src="js/zui.js"></script>
+    <script src="js/screenfull.js"></script>
+    <script src="js/river.js"></script>
+    <script>
+        $(document).on("keyup", function (e) {
+            var show = document.getElementById("mainShow")
+            var width = window.screen.width;
+            var height = window.screen.height;
+            if (e.keyCode == 122) {
+                if (screenfull.enabled) {
+                    screenfull.toggle(show)
                 }
+            }
+            if (screenfull.enabled) {
+                screenfull.on('change', () => {
+                    console.log('Am I fullscreen?', screenfull.isFullscreen ? 'Yes' : 'No');
+                    if (screenfull.isFullscreen) {
+                        $("#mainShow").css({
+                            width: width,
+                            height: height
+                        })
+                        console.log("yes")
+                    } else {
+                        console.log("no")
+                        $("#mainShow").removeAttr("style")
+                    }
+                });
+            }
+        })
+    </script>
+    <script>
+        //    116.240692,37.367719
+        var map = new BMap.Map("map");
+        var point = new BMap.Point(116.240692, 37.367719);
+        map.centerAndZoom(point, 16);
+        map.enableScrollWheelZoom(true);
+
+
+        var pt = new BMap.Point(116.240692, 37.367719);
+        var myIcon = new BMap.Icon("./image/marker.png", new BMap.Size(50, 50));
+        var marker = new BMap.Marker(pt, {
+            icon: myIcon
+        }); // 创建标注
+        map.addOverlay(marker);
+
+        var sContent =
+            "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>监测点1#</h4>" +
+            "<p class= 'text-danger ' style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>" +
+            "COD:500</p>" +
+            "</div>";
+        var infoWindow = new BMap.InfoWindow(sContent); // 创建信息窗口对象
+        marker.addEventListener("click", function () {
+            this.openInfoWindow(infoWindow);
         });
-        }
-    })
-
-</script>
-<script>
-//    116.240692,37.367719
-var map = new BMap.Map("mainShow");
-var point = new BMap.Point(116.240692,37.367719);
-map.centerAndZoom(point, 16);
-
-var marker = new BMap.Marker(new BMap.Point(116.240692,37.367719));
-map.addOverlay(marker);
-</script>
+    </script>
 </body>
+
 </html>

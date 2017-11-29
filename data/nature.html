@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="../css/zui.css">
     <link rel="stylesheet" href="../css/zui-theme-dark.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -14,29 +14,31 @@
         #mainShow {
             background-color: #3A4144;
         }
-        #mainShow div {
 
-        }
+        #mainShow div {}
     </style>
     <title>山东章卫新河</title>
 </head>
+
 <body>
-<!--导航-->
-<nav class="navbar header-navbar header-nav navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <!-- 导航头部 -->
-        <div class="navbar-header">
-            <!-- 品牌名称或logo -->
-            <a class="navbar-brand" href="#">
-                <img src="../image/logo.png" alt="">
-            </a>
-        </div>
-        <div class="leftControl lf">
-           <span class="icon icon-yinyang icon-2x"></span>
-        </div>
-        <!-- 导航项目 -->
+    <!--导航-->
+    <nav class="navbar header-navbar header-nav navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- 导航头部 -->
+            <div class="navbar-header">
+                <!-- 品牌名称或logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../image/logo.png" alt="">
+                </a>
+            </div>
+            <div class="leftControl lf">
+                <span class="icon icon-th icon-2x"></span>
+            </div>
+            <!-- 导航项目 -->
             <ul class="nav navbar-nav pull-right navbar-content">
-                <li class=""><a href="#">欢迎您,XXX</a></li>
+                <li class="">
+                    <a href="#">欢迎您,XXX</a>
+                </li>
                 <li>
                     <a href="">
                         <i class="icon icon-envelope-alt">
@@ -58,54 +60,89 @@
                 </li>
             </ul>
 
-    </div>
-</nav>
-<!--主体部分-->
-<section>
+        </div>
+    </nav>
+    <!--主体部分-->
+    <section>
         <div class="left-side lf ">
 
-           <ul class="left-menu">
-               <li>
-                   <a id="data" href="../index.html" class=""><i class="icon icon-server"></i>数据管理
-                    <span class="icon icon-chevron-down rt"></span>
-                   </a>
-                   <ul class="submenu">
-                       <li><a href="../data/remote-sising.html"><i class="icon icon-angle-right"></i>遥感信息</a></li>
-                       <li><a href="../data/nature.html"><i class="icon icon-angle-right"></i>自然环境</a></li>
-                       <li><a href="../data/sample.html"><i class="icon icon-angle-right"></i>采样数据</a></li>
-                   </ul>
-               </li>
-               <li><a id="module" href=""><i class="icon icon-cube"></i>模拟评估
-                   <span class="icon icon-chevron-down rt"></span>
-               </a>
-                   <ul class="submenu">
-                       <li><a href=""><i class="icon icon-angle-right"></i>模型库</a></li>
-                       <li><a href=""><i class="icon icon-angle-right"></i>数字模拟</a></li>
-                   </ul>
-               </li>
-               <li ><a id="warn" href=""><i class="icon icon-warning-sign"></i>预警系统
-                   <span class="icon icon-chevron-down rt"></span>
-               </a>
-                   <ul class="submenu">
-                       <li><a href=""><i class="icon icon-angle-right"></i>监测预警<span class="label label-badge label-danger rt">4</span></a></li>
-                       <li><a href=""><i class="icon icon-angle-right"></i>预测预警<span class="label label-badge label-warning rt">2</span></a></li>
-                   </ul>
-               </li>
-               <li><a id="question" href=""><i class="icon icon-cloud"></i>智慧决策
+            <ul class="left-menu">
+                <li>
+                    <a id="data" href="javascript:;" class="">
+                        <i class="icon icon-server"></i>数据管理
+                        <span class="icon icon-chevron-down rt"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="../data/remote-sising.html">
+                                <i class="icon icon-angle-right"></i>遥感信息</a>
+                        </li>
+                        <li>
+                            <a href="../data/nature.html">
+                                <i class="icon icon-angle-right"></i>自然环境</a>
+                        </li>
+                        <li>
+                            <a href="../data/sample.html">
+                                <i class="icon icon-angle-right"></i>采样数据</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="module" href="javascript:;">
+                        <i class="icon icon-cube"></i>模拟评估
+                        <span class="icon icon-chevron-down rt"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="../simulate/library.html">
+                                <i class="icon icon-angle-right"></i>模型库</a>
+                        </li>
+                        <li>
+                            <a href="../simulate/digitalSimulation.html">
+                                <i class="icon icon-angle-right"></i>数字模拟</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="warn" href="javascript:;">
+                        <i class="icon icon-warning-sign"></i>预警系统
+                        <span class="icon icon-chevron-down rt"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="../caution/monitor.html">
+                                <i class="icon icon-angle-right"></i>监测预警
+                                <span class="label label-badge label-danger rt">4</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../caution/predict.html">
+                                <i class="icon icon-angle-right"></i>预测预警
+                                <span class="label label-badge label-warning rt">2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="question" href="../desion/decision.html">
+                        <i class="icon icon-cloud"></i>智慧决策
 
-               </a></li>
-               <li><a id="yingji" href=""><i class="icon icon-umbrella"></i>应急预案
+                    </a>
+                </li>
+                <li>
+                    <a id="yingji" href="../plane/plan.html">
+                        <i class="icon icon-umbrella"></i>应急预案
 
-               </a></li>
-           </ul>
+                    </a>
+                </li>
+            </ul>
         </div>
         <div class="main-content">
             <div class="main-content-title">
-                <h3><i class="icon icon-1x icon-server"></i>自然环境</h3>
-                <p>断面，位置管理，水质等级
-                    周围气候、自然地理、地形、降水、蒸发、农业面源、工业电源
-                    土地利用，农田，村庄，公园，工业
-                    历史天气</p>
+                <h3>
+                    <i class="icon icon-1x icon-server"></i>自然环境</h3>
+                <p>断面，位置管理，水质等级 周围气候、自然地理、地形、降水、蒸发、农业面源、工业电源 土地利用，农田，村庄，公园，工业 历史天气
+                </p>
             </div>
             <div class="main-content-body">
                 <div class="container-fluid">
@@ -118,8 +155,9 @@
                             </header>
                             <!-- 文章正文部分 -->
                             <section class="content">
-                               <p>漳卫新河自武城四女寺而下，入陵县，经德州市德城区入吴桥县，成为冀鲁分界，又顺次自西南向东北流经东光、宁津、南皮、乐陵、盐山、庆云、海兴、无棣，至大口河流入渤海，全长257公里。</p>
-                                <p>沿河地区经济发展迅速，特别是滨海地区经济发展更为迅猛。北岸有国家重点工程沧州港（黄骅港），神黄铁路横贯该区，是我国晋煤外运的新通道；南岸有滨州港经济园区，有国家大型骨干化工企业鲁北化工厂。 东部有山东建设中的黄河三角洲高效生态经济区，经济发展日益崛起。</p>
+                                <p>漳卫新河自武城四女寺而下，入陵县，经德州市德城区入吴桥县，成为冀鲁分界，又顺次自西南向东北流经东光、宁津、南皮、乐陵、盐山、庆云、海兴、无棣，至大口河流入渤海，全长257公里。</p>
+                                <p>沿河地区经济发展迅速，特别是滨海地区经济发展更为迅猛。北岸有国家重点工程沧州港（黄骅港），神黄铁路横贯该区，是我国晋煤外运的新通道；南岸有滨州港经济园区，有国家大型骨干化工企业鲁北化工厂。
+                                    东部有山东建设中的黄河三角洲高效生态经济区，经济发展日益崛起。</p>
                                 <p>
                                     漳卫新河原名鬲津河，是大禹治水时开挖疏通的九河之一，1955年扩挖改造，与其上游的四女寺减河统一命名为四女寺减河。原四女寺减河是一条长度只有十多华里的行洪河道，上接卫运河，下连鬲津河。1968年研究治理漳卫河时，定名为漳卫新河。1971年再次扩大治理时，改分洪为承泄卫运河洪水入海的主要河道，正式更名为漳卫新河。
                                 </p>
@@ -148,8 +186,7 @@
                                     河道平均比降为0.11/1000。由于流域内地势向东北倾斜，支流多由右岸注入。
                                 </p>
                                 <p>
-                                    徒骇河是宋代漯川堙没后逐渐演变而形成。随着黄河的南徙，为适应地表径流排泄的需要，在古漯川流域发育了一些新的河流，明代以前一般都称土河，即为徒骇河的前身。
-                                    这些河流逐渐贯通演变，明代便更名为徒骇河。
+                                    徒骇河是宋代漯川堙没后逐渐演变而形成。随着黄河的南徙，为适应地表径流排泄的需要，在古漯川流域发育了一些新的河流，明代以前一般都称土河，即为徒骇河的前身。 这些河流逐渐贯通演变，明代便更名为徒骇河。
                                 </p>
                                 <p>
                                     1591年(明万历十九年)所修的《临邑县志》载，“徒骇河由齐河县经下口至城东南二十五里，俗名土河”。这是把当时土河冠以《禹贡》“九河”之一的徒骇河的最早记载。
@@ -172,41 +209,42 @@
                 </div>
             </div>
         </div>
-</section>
-<script src="../lib/jquery/jquery.js"></script>
-<script src="../lib/highcharts/highcharts.js"></script>
-<script src="../js/dark-unica.js"></script>
-<script src="../js/zui.js"></script>
-<script src="../js/screenfull.js"></script>
-<script src="../js/river.js"></script>
-<script>
-    $(document).on("keyup",function (e) {
-        var show = document.getElementById("mainShow");
-        var oldWidth = $()
-        var width = window.screen.width;
-        var height = window.screen.height;
-        console.log(width,height)
-        if(e.keyCode == 122){
-            if(screenfull.enabled){
-                screenfull.request(show)
-            }
-        }
-        if (screenfull.enabled) {
-            screenfull.on('change', () => {
-                console.log('Am I fullscreen?', screenfull.isFullscreen ? 'Yes' : 'No');
-                if(screenfull.isFullscreen){
-                   $("#mainShow").css({
-                       width: width,
-                       height: height
-                   })
-                    console.log("yes")
-                }else {
-                    console.log("no")
-                    $("#mainShow").removeAttr("style")
+    </section>
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/highcharts/highcharts.js"></script>
+    <script src="../js/dark-unica.js"></script>
+    <script src="../js/zui.js"></script>
+    <script src="../js/screenfull.js"></script>
+    <script src="../js/river.js"></script>
+    <script>
+        $(document).on("keyup", function (e) {
+            var show = document.getElementById("mainShow");
+            var oldWidth = $()
+            var width = window.screen.width;
+            var height = window.screen.height;
+            console.log(width, height)
+            if (e.keyCode == 122) {
+                if (screenfull.enabled) {
+                    screenfull.request(show)
                 }
-        });
-        }
-    })
-</script>
+            }
+            if (screenfull.enabled) {
+                screenfull.on('change', () => {
+                    console.log('Am I fullscreen?', screenfull.isFullscreen ? 'Yes' : 'No');
+                    if (screenfull.isFullscreen) {
+                        $("#mainShow").css({
+                            width: width,
+                            height: height
+                        })
+                        console.log("yes")
+                    } else {
+                        console.log("no")
+                        $("#mainShow").removeAttr("style")
+                    }
+                });
+            }
+        })
+    </script>
 </body>
+
 </html>

@@ -75,7 +75,7 @@ section {
     color: #868E8E;
 }
 
-.left-menu>li {
+.left-menu li {
     position: relative;
 }
 
@@ -111,6 +111,14 @@ section {
 
 .submenu li a i {
     margin-right: 8px;
+}
+/*二级子菜单*/
+.second-submenu {
+
+}
+
+.second-submenu li a {
+    color: #fff;
 }
 
 .leftControl {
@@ -176,4 +184,13 @@ section {
 
 .main-content-title h3+p {
     padding-left: 22px;
+}
+
+/*//icon 旋转*/
+i.icon {
+    transition: all 0.5s linear;
+}
+
+table {
+    text-align: left;
 }

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/zui.css">
+    <link rel="stylesheet" href="../css/zui-theme-dark.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/table.css">
+    <!--<script src="http://api.map.baidu.com/api?v=2.0&ak=v=2.0&ak=akI4wAf7CooAowa2NqMBeREwvbUmYT1L"></script>-->
+    <style>
+        #mainShow {
+            background-color: #3A4144;
+        }
+
+        .mapcontainer {
+            height: 770px;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            margin-top: 20px;
+        }
+
+        #mainShow table {
+            text-align: left;
+        }
+
+        td a {
+            color: #fff;
+        }
+    </style>
+    <title>山东章卫新河</title>
+</head>
+
+<body>
+    <!--导航-->
+    <nav class="navbar header-navbar header-nav navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- 导航头部 -->
+            <div class="navbar-header">
+                <!-- 品牌名称或logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="../image/logo.png" alt="">
+                </a>
+            </div>
+            <div class="leftControl lf">
+                <span class="icon icon-th icon-2x"></span>
+            </div>
+            <!-- 导航项目 -->
+            <ul class="nav navbar-nav pull-right navbar-content">
+                <li class="">
+                    <a href="#">欢迎您,XXX</a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="icon icon-envelope-alt">
+                            <span class="mylabel label label-badge label-success">6</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon icon-bell-alt">
+                            <span class="mylabel label label-badge label-warning">4</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon icon-signout"></i> 退出
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!--主体部分-->
+    <section>
+        <!--左侧边栏-->
+        <div class="left-side lf ">
+
+            <ul class="left-menu">
+                <li>
+                    <a id="data" href="../index.html" class="">
+                        <i class="icon icon-server"></i>数据管理
+                        <span class="icon icon-chevron-down rt"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="../data/remote-sising.html">
+                                <i class="icon icon-angle-right"></i>遥感信息</a>
+                        </li>
+                        <li>
+                            <a href="../data/nature.html">
+                                <i class="icon icon-angle-right"></i>自然环境</a>
+                        </li>
+                        <li>
+                            <a href="../data/sample.html">
+                                <i class="icon icon-angle-right"></i>采样数据</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="module" href="">
+                        <i class="icon icon-cube"></i>模拟评估
+                        <span class="icon icon-chevron-down rt"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="../simulate/library.html">
+                                <i class="icon icon-angle-right"></i>模型库</a>
+                        </li>
+                        <li>
+                            <a href="../simulate/digitalSimulation.html">
+                                <i class="icon icon-angle-right"></i>数字模拟</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="warn" href="">
+                        <i class="icon icon-warning-sign"></i>预警系统
+                        <span class="icon icon-chevron-down rt"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="../caution/monitor.html">
+                                <i class="icon icon-angle-right"></i>监测预警
+                                <span class="label label-badge label-danger rt">4</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../caution/predict.html">
+                                <i class="icon icon-angle-right"></i>预测预警
+                                <span class="label label-badge label-info rt">2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="question" href="../desion/decision.html">
+                        <i class="icon icon-cloud"></i>智慧决策
+
+                    </a>
+                </li>
+                <li>
+                    <a id="yingji" href="../plane/plan.html">
+                        <i class="icon icon-umbrella"></i>应急预案
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--右侧内容区域-->
+        <div class="main-content">
+            <div class="main-content-title">
+                <h3>
+                    <i class="icon icon-1x icon-server"></i>预案详情</h3>
+                <p>针对当前紧急告警,启动紧急预案,防止污染扩散,详情预测</p>
+            </div>
+            <div class="main-content-body">
+                <div class="container-fluid">
+                    <div id="mainShow" class="mapcontainer row">
+                        <div id="high"></div>
+                        <div id="map">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4>预案详情</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table  ">
+                                        <thead>
+                                            <tr>
+                                                <td>#</td>
+                                                <td>条件
+                                                    <i class="icon icon-anchor"></i>
+                                                </td>
+                                                <td>内容</td>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>（点57 COD>300 并且 点57 NH>20）或（点68 COD>200 并且 点68 NH>15）</td>
+                                                <td>
+                                                    <a href="">
+                                                        市政第二污水厂疑似偷排，环境污染应急预案
+                                                    </a>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>点13 COD>500或 点23 COD>400</td>
+                                                <td>
+                                                    <a href="">
+                                                        市医院污水厂疑似偷排，饮水用污染应急预案
+                                                    </a>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>点3 水位>2m 并且点4 水位>2 并且 点5 水位>2m</td>
+                                                <td>
+                                                    <a href="">防汛抗台工作预案</a>
+                                                </td>
+
+                                            </tr>
+                                            <!--<tr>-->
+                                            <!--<td>4</td>-->
+                                            <!--<td>2017-06-24 00:59:02</td>-->
+                                            <!--<td>【14:21:22 至 14:26:52】紫外消毒池COD超过最大控制标准值，请检查，<span class="text-danger">64.35mg/L当前，</span><span class="text-success">正常范围0 ~ 50mg/L</span></td>-->
+
+                                            <!--</tr>-->
+                                            <!--<tr>-->
+                                            <!--<td>5</td>-->
+                                            <!--<td>2017-06-24 08:28:07</td>-->
+                                            <!--<td>【14:21:22 至 14:26:52】紫外消毒池COD超过最大控制标准值，请检查，<span class="text-danger">64.35mg/L当前，</span><span class="text-success">正常范围0 ~ 50mg/L</span></td>-->
+
+                                            <!--</tr>-->
+                                            <!--<tr>-->
+                                            <!--<td>6</td>-->
+                                            <!--<td>2017-06-24 21:45:21</td>-->
+                                            <!--<td>【14:21:22 至 14:26:52】紫外消毒池COD超过最大控制标准值，请检查，<span class="text-danger">64.35mg/L当前，</span><span class="text-success">正常范围0 ~ 50mg/L</span></td>-->
+
+                                            <!--</tr>-->
+                                            <!--<tr>-->
+                                            <!--<td>7</td>-->
+                                            <!--<td>2017-07-10 23:53:25</td>-->
+                                            <!--<td>【14:21:22 至 14:26:52】紫外消毒池COD超过最大控制标准值，请检查，<span class="text-danger">64.35mg/L当前，</span><span class="text-success">正常范围0 ~ 50mg/L</span>-->
+                                            <!--</tr>-->
+                                            <!--<tr>-->
+                                            <!--<td>8</td>-->
+                                            <!--<td>2017-07-12 15:54:16</td>-->
+                                            <!--<td>【14:21:22 至 14:26:52】紫外消毒池COD超过最大控制标准值，请检查，<span class="text-danger">64.35mg/L当前，</span><span class="text-success">正常范围0 ~ 50mg/L</span></td>-->
+
+                                            <!--</tr>-->
+                                            <!--<tr>-->
+                                            <!--<td>9</td>-->
+                                            <!--<td>2017-10-20 15:07:25</td>-->
+                                            <!--<td>【14:21:22 至 14:26:52】紫外消毒池COD超过最大控制标准值，请检查，<span class="text-danger">64.35mg/L当前，</span><span class="text-success">正常范围0 ~ 50mg/L</span></td>-->
+
+                                            <!--</tr>-->
+                                            <!--<tr>-->
+                                            <!--<td>10</td>-->
+                                            <!--<td>2017-10-20 15:07:50</td>-->
+                                            <!--<td>【14:21:22 至 14:26:52】紫外消毒池COD超过最大控制标准值，请检查，<span class="text-danger">64.35mg/L当前，</span><span class="text-success">正常范围0 ~ 50mg/L</span></td>-->
+
+                                            <!--</tr>-->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../lib/jquery/jquery.js"></script>
+    <script src="../lib/highcharts/highcharts.js"></script>
+    <script src="../js/dark-unica.js"></script>
+    <script src="../js/zui.js"></script>
+    <script src="../js/screenfull.js"></script>
+    <script src="../js/river.js"></script>
+    <script>
+        $(document).on("keyup", function (e) {
+            var show = document.getElementById("mainShow")
+            var width = window.screen.width;
+            var height = window.screen.height;
+            if (e.keyCode == 122) {
+                if (screenfull.enabled) {
+                    screenfull.toggle(show)
+                }
+            }
+            if (screenfull.enabled) {
+                screenfull.on('change', () => {
+                    console.log('Am I fullscreen?', screenfull.isFullscreen ? 'Yes' : 'No');
+                    if (screenfull.isFullscreen) {
+                        $("#mainShow").css({
+                            width: width,
+                            height: height
+                        })
+                        console.log("yes")
+                    } else {
+                        console.log("no")
+                        $("#mainShow").removeAttr("style")
+                    }
+                });
+            }
+        })
+    </script>
+    <script>
+        $("table tr:nth-child(even)").css("backgroundColor", "#4B5357")
+        $("table tr:nth-child(odd)").css("backgroundColor", "#5D6468")
+        $("thead tr").css("backgroundColor", "#4b5357")
+    </script>
+    <!--<script>-->
+    <!--//    116.240692,37.367719-->
+    <!--var map = new BMap.Map("map");-->
+    <!--var point = new BMap.Point(116.240692,37.367719);-->
+    <!--map.centerAndZoom(point, 16);-->
+    <!--map.enableScrollWheelZoom(true);-->
+
+
+    <!--var pt = new BMap.Point(116.240692,37.367719);-->
+    <!--var myIcon = new BMap.Icon("./image/marker.png", new BMap.Size(50,50));-->
+    <!--var marker = new BMap.Marker(pt,{icon:myIcon});  // 创建标注-->
+    <!--map.addOverlay(marker);-->
+
+    <!--var sContent =-->
+    <!--"<h4 style='margin:0 0 5px 0;padding:0.2em 0'>监测点1#</h4>" +-->
+    <!--"<p class= 'text-danger ' style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>" +-->
+    <!--"COD:500</p>" +-->
+    <!--"</div>";-->
+    <!--var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象-->
+    <!--marker.addEventListener("click", function(){-->
+    <!--this.openInfoWindow(infoWindow);-->
+    <!--//图片加载完毕重绘infowindow-->
+
+    <!--});-->
+    <!--</script>-->
+    <script>
+        var chart = Highcharts.chart('high', {
+            chart: {
+                type: 'spline'
+            },
+            title: {
+                text: '启动预案前后预计对比'
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                categories: ['一月', '二月', '三月', '四月', '五月', '六月',
+                    '七月', '八月', '九月', '十月', '十一月', '十二月'
+                ]
+            },
+            yAxis: {
+                title: {
+                    text: 'mg/L'
+                },
+                labels: {
+                    formatter: function () {
+                        return this.value + 'mg/L';
+                    }
+                }
+            },
+            tooltip: {
+                crosshairs: true,
+                shared: true
+            },
+            plotOptions: {
+                spline: {
+                    marker: {
+                        radius: 4,
+                        lineColor: '#666666',
+                        lineWidth: 1
+                    }
+                }
+            },
+            series: [{
+                name: '启动前',
+                marker: {
+                    symbol: 'square'
+                },
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
+                    y: 26.5,
+
+                }, 23.3, 18.3, 13.9, 9.6]
+            }, {
+                name: '启动后',
+                marker: {
+                    symbol: 'diamond'
+                },
+                data: [{
+                    y: 3.9,
+
+                }, 4.2, 5.7, 8.5, 11.9, 12.2, 13.0, 11.6, 11.2, 10.3, 6.6, 4.8]
+            }]
+        });
+    </script>
+</body>
+
+</html>
