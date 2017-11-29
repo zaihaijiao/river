@@ -102,12 +102,23 @@
                     </a>
                     <ul class="submenu">
                         <li>
-                            <a href="../simulate/library.html">
-                                <i class="icon icon-angle-right"></i>模型库</a>
+                            <a href="../simulate/digitalSimulation.html"><i class="icon icon-angle-right"></i>COD数值模拟</a>
                         </li>
                         <li>
-                            <a href="../simulate/digitalSimulation.html">
-                                <i class="icon icon-angle-right"></i>数字模拟</a>
+                            <a href="../simulate/digitalSimulation.html"><i class="icon icon-angle-right"></i>氨氮数值模拟</a>
+                        </li>
+                        <li>
+                            <a href="../simulate/digitalSimulation.html"><i class="icon icon-angle-right"></i>TDS数值模拟</a>
+                        </li>
+                        <li>
+                            <a href="../simulate/digitalSimulation.html"><i class="icon icon-angle-right"></i>DO数值模拟</a>
+                        </li>
+                        <li>
+                            <a href="../simulate/digitalSimulation.html"><i class="icon icon-angle-right"></i>ORP数值模拟</a>
+                        </li>
+                        <li>
+                            <a href="../simulate/digitalSimulation.html"><i class="icon icon-angle-right"></i>PH数值模拟</a>
+                        </li>
                         </li>
                     </ul>
                 </li>
@@ -196,7 +207,7 @@
     </script>
     <script>
         //    116.240692,37.367719
-        var map = new BMap.Map("map");
+        var map = new BMap.Map("map",{mapType:BMAP_HYBRID_MAP});
         var point = new BMap.Point(116.240692, 37.367719);
         map.centerAndZoom(point, 16);
         map.enableScrollWheelZoom(true);
@@ -208,13 +219,30 @@
             icon: myIcon
         }); // 创建标注
         map.addOverlay(marker);
+        var opts = {
+            width : 200,     // 信息窗口宽度
+//            height: auto,     // 信息窗口高度
+           title : "监测点1#" , // 信息窗口标题, maxWidth: 220-3780 offset偏移 enableAutoPan 信息窗口打开是移动 enableCloseOnClick 点击地图关闭窗口
+            enableMessage: false
 
+        }
         var sContent =
             "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>监测点1#</h4>" +
             "<p class= 'text-danger ' style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>" +
             "COD:500</p>" +
             "</div>";
-        var infoWindow = new BMap.InfoWindow(sContent); // 创建信息窗口对象
+
+
+        var sContent1 = `
+            <div class="" style="background-color:#366FB6;padding: 10px;width:500px;">
+            <h3></h3>
+            <p class="text-success">COD：50mg/L</p>
+            <p class="text-warning">氨氮：50mg/L</p>
+            <p class="text-warning">TDS：50mg/L</p>
+            <p class="text-danger">DO：50mg/L</p>
+</div>
+        `
+        var infoWindow = new BMap.InfoWindow(sContent1,opts); // 创建信息窗口对象
         marker.addEventListener("click", function () {
             this.openInfoWindow(infoWindow);
         });
